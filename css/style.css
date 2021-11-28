@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,500;0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "fontGame";
+    src: url("../font/Pony.ttf");
+}
+
+html,
+body {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: fontGame;
+    color: white;
+}
+
+#app {
+    background: url(../assets/Images/stadium.jpg) no-repeat center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 80px 50px;
+    gap: 30px;
+}
+#app h3 {
+    text-align: center;
+    font-size: 5.4rem;
+    margin-bottom: 40px;
+}
+.prediction {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+}
+.team-1,
+.team-2 {
+    display: grid;
+    place-items: center;
+}
+.team-1 img {
+    width: 300px;
+    min-width: 60px;
+}
+.team-2 img {
+    width: 254px;
+    min-width: 60px;
+}
+.score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22.7em;
+    gap: 10px;
+    grid-column: 2 / 4;
+}
+.score-1,
+.score-2 {
+    min-width: 160px;
+    text-align: center;
+}
+.btn-random {
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    font-family: "fontGame";
+}
+@media screen and (max-width: 992px) {
+    #app {
+        padding: 80px 20px;
+    }
+    .team-1 img,
+    .team-2 img {
+        width: 200px;
+    }
+    .score {
+        font-size: 10rem;
+    }
+    .score-1,
+    .score-2 {
+        min-width: 70px;
+    }
+    #app h3 {
+        font-size: 4rem;
+    }
+    .btn-random {
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #app {
+        padding: 80px 20px;
+    }
+    .team-1 img,
+    .team-2 img {
+        width: 130px;
+    }
+    .score {
+        font-size: 10rem;
+    }
+    .score-1,
+    .score-2 {
+        min-width: 70px;
+    }
+    #app h3 {
+        font-size: 4rem;
+    }
+    .btn-random {
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #app {
+        padding: 80px 20px;
+    }
+    .team-1 img,
+    .team-2 img {
+        width: 100%;
+    }
+    .score {
+        font-size: 8.7em;
+    }
+    .score-1,
+    .score-2 {
+        min-width: 70px;
+    }
+    #app h3 {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #app {
+        padding: 80px 20px;
+    }
+    .team-1 img,
+    .team-2 img {
+        width: 100%;
+    }
+    .score {
+        font-size: 4rem;
+    }
+    .score-1,
+    .score-2 {
+        min-width: 70px;
+    }
+    #app h3 {
+        font-size: 2.7rem;
+    }
+    .btn-random {
+        padding: 15px 30px;
+    }
+}
